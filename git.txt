@@ -1,0 +1,58 @@
+git config --global user.name blackmind
+git config --global user.email 1002783057@qq.com
+git config --list 查看git的配置
+
+git commit -m 'first commit'   将暂存区 放到版本库 第一次提交
+git commit -am 'remodified  要提交的东西'  可以跳过add 这个命令
+git commit --amend 撤回上一次的提交 将暂存区的文件重新提交
+git rm 要删除的东西 将工作区和暂存区的东西一起删除
+git rm --cached 要删除的东西  //只是删除暂存区的文件
+
+git log 查看提交的东西
+git log --oneline 查看提交的东西
+
+git reset 指针 文件名 可以回到以前的版本
+git reset HEAD 需要撤回暂存区的文件
+git checkout -- 需要撤回工作区的文件  git checkout -- . 撤回全部
+git init 
+初始化空仓库
+
+git status 
+查看文件有没有被追踪
+
+git add 文件名 //将工作区 放到暂存区
+git add .  全部放到暂存区
+待提交的状态 
+
+
+git branch   查看分支
+git branch 分支名字 
+git checkout 分支名字   切换分支
+git branch -d 分支名 要删除必须先切换到其他分支
+git branch -m 分支名 要换的分支名
+git checkout -b 分支名  他的作用是创建分支 并且切换到那个分支
+git merge 分支名   合并分支
+
+
+git diff 工作区与暂存区的差异
+git diff --staged 工作区与版本库的差异  需要吧工作区的文件上传到暂存区才可以看到差异
+git diff git log里的指针 git log里的指针 2个比较
+git diff 分支名  可以看到他们的差异
+
+
+git stash  // 暂时封存 切换分支的时候用的
+git stash list 可以查看封存的版本号 和apply 配合使用
+git stash aplly stash@{里面放版本号}  可以啦回版本号里的东西
+git stash pop stash@{里面放版本号}  在上个的基础上 添加了一个删除
+git stash drop stash@{里面放版本号}  删除版本号
+
+git push 远程仓库  第一个分支名是远程仓库的分支 第2个是本地 默认是远程仓库的分支名
+git pull 远程仓库  第一个分支名是远程仓库的分支 第二个是拉到本地的那个分支上去 
+	
+ssh-keygen 生成公钥
+git remote add origin https://github.com/BlackMinds/newgit.git     origin是远程仓库的服务器名一般叫origin 第二个是远程仓库的地址
+git pull origin master   第一个是远程仓库的服务器名 第2个是分支名
+git remote -v   查看添加的地址 
+
+
+
